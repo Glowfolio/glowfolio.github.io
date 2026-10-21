@@ -34,6 +34,7 @@ a{color:#7FE6FA}a:hover{color:#C9F5FD}
 @keyframes gfflow{to{stroke-dashoffset:-28}}
 @media (prefers-reduced-motion: reduce){.flow{animation:none}}
 summary{cursor:pointer;list-style:none}
+.swipe-hint{display:none}
 summary::-webkit-details-marker{display:none}
 details[open] .chev{transform:rotate(45deg)}
 @media (max-width: 760px){
@@ -43,11 +44,19 @@ details[open] .chev{transform:rotate(45deg)}
 .lead{font-size:16px !important}
 .cta-row > a{flex:1 1 100%;justify-content:center}
 .card{padding:22px !important}
-.cmp{border:0 !important;overflow:visible !important}
+.cmp{border:0 !important;overflow:visible !important;margin:0 -24px}
 .cmp table{min-width:0 !important;display:block}
 .cmp thead{display:none}
-.cmp tbody{display:flex;flex-direction:column;gap:12px}
-.cmp tr{display:flex;flex-direction:column;gap:6px;border:1px solid #1C2756 !important;border-radius:14px;padding:16px;background:#0B1233}
+.cmp tbody{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 24px 12px;scroll-padding:0 24px;scrollbar-width:none}
+.cmp tbody::-webkit-scrollbar{display:none}
+.cmp tr{flex:0 0 80%;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;border:1px solid #1C2756 !important;border-radius:14px;padding:18px;background:#0B1233}
+.swipe-hint{display:flex !important}
+.swipe{display:flex !important;gap:12px !important;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -24px !important;padding:4px 24px 14px !important;scroll-padding:0 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.swipe::-webkit-scrollbar{display:none}
+.swipe > *{flex:0 0 84%;min-width:0;scroll-snap-align:start}
+.swipe.pricing{padding-top:18px !important}
+.hero figure{max-width:340px;margin:0 auto !important}
+.priv{background:#0B1233;border:1px solid #1C2756;border-top:2px solid var(--accent) !important;border-radius:14px;padding:18px !important}
 .cmp th,.cmp td{display:block;padding:0 !important}
 .cmp td::before{content:attr(data-label);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7E8AB8;margin-top:6px}
 }
@@ -147,6 +156,7 @@ body.early .v-early{display:contents}
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">01 — KENAPA GLOWFOLIO</div>
 <h2 id="beda-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Template membuatmu terlihat seperti semua orang. Kami membuatmu terlihat seperti dirimu.</h2>
 </div>
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">5 ASPEK · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
 <div class="cmp" style="overflow-x: auto; border: 1px solid #1C2756; border-radius: 16px">
 <table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px">
 <thead>
@@ -173,7 +183,8 @@ body.early .v-early{display:contents}
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">02 — CARA KERJA</div>
 <h2 id="cara-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Empat langkah, dari CV lama ke identitas profesional.</h2>
 </div>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 20px">
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">4 LANGKAH · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
+<ol class="swipe" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 20px">
 <li class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span class="mono" style="font-size: 13px; color: var(--accent)">STEP 01</span>
 <h3 class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Cek CV gratis</h3>
@@ -203,7 +214,8 @@ body.early .v-early{display:contents}
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">03 — FITUR</div>
 <h2 id="fitur-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Hal-hal yang jarang kamu temukan di jasa CV lain.</h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">8 FITUR · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
+<div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
 <article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
 <svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><polygon class="ac" points="8,24 24,16 40,24 24,32"></polygon><line class="ac" x1="24" y1="8" x2="24" y2="16"></line><line class="ac" x1="24" y1="32" x2="24" y2="40"></line></svg>
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Personal Brand Brief</h3>
@@ -267,7 +279,8 @@ body.early .v-early{display:contents}
 </div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 212px), 1fr)); gap: 16px; align-items: stretch">
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">5 PAKET · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
+<div class="swipe pricing" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 212px), 1fr)); gap: 16px; align-items: stretch">
 
 <article style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
@@ -377,7 +390,8 @@ body.early .v-early{display:contents}
 </div>
 <p style="margin: 0; font-size: 13px; color: #7E8AB8">*Biaya domain ditanggung klien. Hari kerja dihitung sejak pembayaran terkonfirmasi dan Brand Brief lengkap.</p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px">
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">ADD-ON &amp; CV CARE · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
+<div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px">
 <div style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Add-on</h3>
 <dl style="margin: 0; display: flex; flex-direction: column; font-size: 15px">
@@ -432,28 +446,29 @@ body.early .v-early{display:contents}
 <h2 id="privasi-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">CV berisi hidupmu. Kami memperlakukannya begitu.</h2>
 <p style="margin: 0; color: #B4BEE3">Kami mengikuti prinsip Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi: hanya mengumpulkan yang perlu, hanya untuk pesananmu, dan menghapusnya setelah selesai.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">6 JANJI PRIVASI · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
+<div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Data seperlunya</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Kami tidak meminta NIK, foto KTP, atau data keuangan. Cukup isi CV dan jawaban Brand Brief.</p>
 </div>
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Kontak tidak pernah publik</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Repositori GitHub Pages bersifat publik, jadi nomor HP dan alamat tidak pernah kami simpan di sana. Keduanya hanya ada di PDF yang kamu kirim sendiri.</p>
 </div>
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Dihapus dalam 90 hari</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">File dan jawaban brief dihapus dari penyimpanan kami paling lambat 90 hari setelah pesanan selesai, kecuali kamu berlangganan CV Care.</p>
 </div>
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Tidak dijual, tidak dibagikan</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Datamu tidak dijual atau diberikan ke perekrut, agensi, atau pihak lain mana pun.</p>
 </div>
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Dipajang hanya dengan izin</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Hasil karyamu hanya muncul di portofolio atau konten kami bila kamu setuju secara tertulis, dengan data pribadi disamarkan.</p>
 </div>
-<div style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<div class="priv" style="border-top: 2px solid var(--accent); padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 18px; font-weight: 600">Terbuka soal AI</h3>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Kami memakai alat AI untuk membantu menyusun draf. Setiap kalimat ditinjau manusia, dan datamu hanya dipakai untuk pesananmu.</p>
 </div>
@@ -585,6 +600,12 @@ body.early .v-early{display:contents}
       document.body.classList.toggle('early', b.getAttribute('data-price')==='early');
     });
   });
+  // Di HP, carousel paket langsung menampilkan paket rekomendasi (Web Card).
+  var row=document.querySelector('.swipe.pricing');
+  if(row && row.scrollWidth>row.clientWidth){
+    var rec=row.children[2];
+    if(rec) row.scrollLeft=rec.offsetLeft-row.offsetLeft-24;
+  }
 })();
 </script>
 </body>
