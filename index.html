@@ -35,6 +35,9 @@ a{color:#7FE6FA}a:hover{color:#C9F5FD}
 @media (prefers-reduced-motion: reduce){.flow{animation:none}}
 summary{cursor:pointer;list-style:none}
 .swipe-hint{display:none}
+.seg-wrap{display:none}
+.seg{min-height:44px;flex:1 1 0;padding:0 16px;border-radius:999px;border:0;font:inherit;font-size:15px;font-weight:600;cursor:pointer;background:transparent;color:#C3CBEA}
+.seg.on{background:var(--accent);color:#04122A}
 summary::-webkit-details-marker{display:none}
 details[open] .chev{transform:rotate(45deg)}
 @media (max-width: 760px){
@@ -56,6 +59,10 @@ details[open] .chev{transform:rotate(45deg)}
 .swipe > *{flex:0 0 84%;min-width:0;scroll-snap-align:start}
 .swipe.pricing{padding-top:18px !important}
 .hero figure{max-width:340px;margin:0 auto !important}
+.seg-wrap{display:flex !important}
+.extras{display:block !important}
+.extras.show-addon .panel-care,.extras.show-care .panel-addon{display:none !important}
+.extras > *{margin:0}
 .priv{background:#0B1233;border:1px solid #1C2756;border-top:2px solid var(--accent) !important;border-radius:14px;padding:18px !important}
 .cmp th,.cmp td{display:block;padding:0 !important}
 .cmp td::before{content:attr(data-label);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7E8AB8;margin-top:6px}
@@ -395,9 +402,12 @@ body.early .v-early{display:contents}
 <a href="syarat.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--accent); font-weight: 600; text-decoration: none">Syarat &amp; ketentuan lengkap<span aria-hidden="true">→</span></a>
 </div>
 
-<p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">ADD-ON &amp; CV CARE · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
-<div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px">
-<div style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div class="seg-wrap" role="group" aria-label="Pilih yang ingin dilihat" style="gap: 4px; padding: 4px; border: 1px solid #2F3B74; border-radius: 999px; background: #0B1233">
+<button type="button" class="seg on" data-extras="addon" aria-pressed="true">Add-on</button>
+<button type="button" class="seg" data-extras="care" aria-pressed="false">CV Care</button>
+</div>
+<div class="extras show-addon" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px">
+<div class="panel-addon" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Add-on</h3>
 <dl style="margin: 0; display: flex; flex-direction: column; font-size: 15px">
 <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><dt style="color: #C3CBEA">Varian CV per lowongan</dt><dd style="margin: 0; font-weight: 600; white-space: nowrap">Rp29 rb</dd></div>
@@ -408,7 +418,7 @@ body.early .v-early{display:contents}
 <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0"><dt style="color: #C3CBEA">Pengerjaan ekspres 24 jam</dt><dd style="margin: 0; font-weight: 600; white-space: nowrap">+50%</dd></div>
 </dl>
 </div>
-<div style="background: #0D1540; border: 1px solid #2F3B74; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div class="panel-care" style="background: #0D1540; border: 1px solid #2F3B74; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">CV Care</h3>
 <span class="disp" style="font-size: 26px; font-weight: 700; color: var(--accent)">Rp25 rb<span style="font-size: 15px; color: #9AA6CF; font-weight: 500">/bulan</span></span>
@@ -547,6 +557,16 @@ body.early .v-early{display:contents}
   document.querySelectorAll('button[data-price]').forEach(function(b){
     b.addEventListener('click',function(){
       document.body.classList.toggle('early', b.getAttribute('data-price')==='early');
+    });
+  });
+  var extras=document.querySelector('.extras');
+  document.querySelectorAll('button[data-extras]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var tab=btn.getAttribute('data-extras');
+      extras.classList.remove('show-addon','show-care'); extras.classList.add('show-'+tab);
+      document.querySelectorAll('button[data-extras]').forEach(function(o){
+        var on=o===btn; o.classList.toggle('on',on); o.setAttribute('aria-pressed',on?'true':'false');
+      });
     });
   });
   // Di HP, carousel paket langsung menampilkan paket rekomendasi (Web Card).
