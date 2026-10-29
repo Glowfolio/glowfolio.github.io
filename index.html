@@ -70,7 +70,8 @@ details[open] .chev{transform:rotate(45deg)}
 .cmp th,.cmp td{display:block;padding:0 !important}
 .cmp td::before{content:attr(data-label);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7E8AB8;margin-top:6px}
 }
-html{scroll-padding-top:76px}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 .m-only{display:none}
 .ptabs,.mbar{display:none}
 .feat summary{list-style:none;cursor:default}
