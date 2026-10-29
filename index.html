@@ -72,7 +72,7 @@ details[open] .chev{transform:rotate(45deg)}
 }
 html{scroll-padding-top:76px}
 .m-only{display:none}
-.mchips,.ptabs,.mbar{display:none}
+.ptabs,.mbar{display:none}
 .feat summary{list-style:none;cursor:default}
 .feat summary::-webkit-details-marker{display:none}
 @media (min-width: 761px){.feat summary{pointer-events:none}}
@@ -84,12 +84,7 @@ html{scroll-padding-top:76px}
 span.m-only{display:inline}
 .dnav{display:none !important}
 .head-in{padding:8px 16px !important;flex-wrap:nowrap !important;gap:10px !important}
-.head-in .wm{display:none}
 .head-in img{width:34px !important;height:34px !important}
-.mchips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0;margin-right:-16px;padding-right:16px;-webkit-overflow-scrolling:touch}
-.mchips::-webkit-scrollbar{display:none}
-.mchips a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #2F3B74;color:#C3CBEA;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;flex:none}
-.mchips a.on{background:var(--accent);border-color:var(--accent);color:#04122A}
 .hero{padding:28px 20px 36px !important;gap:24px !important}
 .hero > div{gap:16px !important}
 .hero h1{font-size:31px !important;line-height:1.12 !important}
@@ -148,11 +143,27 @@ section h2.disp{font-size:24px !important;line-height:1.2 !important}
 .cta-logo{display:none}
 .foot-in{display:grid !important;grid-template-columns:1fr 1fr;gap:20px 16px !important;padding:28px 20px 104px !important}
 .foot-in > div:first-child,.foot-in > div:last-child{grid-column:1 / -1}
-.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(6,10,31,0.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #1C2756;transition:transform .25s ease}
-.mbar.off{transform:translateY(130%)}
-.mbar a{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none}
+.mbar{display:flex;align-items:center;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(6,10,31,0.97);border-top:1px solid #1C2756;transition:background .2s,border-color .2s}
+.mbar.off{background:transparent;border-color:transparent;pointer-events:none}
+.mbar.off > a{display:none}
+.mbar > a{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none}
 .mbar .mb-ghost{border:1px solid #2F3B74;color:#EAF0FF}
 .mbar .mb-main{background:var(--accent);color:#04122A}
+.mmenu{margin-left:auto;flex:none;pointer-events:auto}
+.mfab{list-style:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#0D1540;border:1px solid #2F3B74;color:#EAF0FF;box-shadow:0 10px 28px rgba(0,0,0,0.5);cursor:pointer;position:relative}
+.mfab::-webkit-details-marker{display:none}
+.mfab:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mmenu[open] .mfab{background:var(--accent);border-color:var(--accent);color:#04122A}
+.mmenu .ic-x{display:none}
+.mmenu[open] .ic-x{display:block}
+.mmenu[open] .ic-m{display:none}
+.mmenu[open] > summary::before{content:"";position:fixed;inset:0;background:rgba(3,6,20,0.62)}
+.msheet{position:fixed;left:12px;right:12px;bottom:calc(84px + env(safe-area-inset-bottom));max-height:72vh;overflow:auto;background:#0B1233;border:1px solid #2F3B74;border-radius:20px;padding:16px;box-shadow:0 24px 60px rgba(0,0,0,0.55)}
+.msh-t{margin:4px 4px 10px;font-size:11px;letter-spacing:0.12em;color:#7E8AB8}
+.msh-t + .msh-grid + .msh-t{margin-top:18px}
+.msh-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.msh-grid a{display:flex;align-items:center;min-height:48px;padding:0 14px;border-radius:12px;background:#0D1540;border:1px solid #1C2756;color:#EAF0FF;font-weight:600;font-size:15px;text-decoration:none}
+.msh-grid a.on{border-color:var(--accent);color:var(--accent)}
 }
 .xtra-sum{display:none}
 @media (max-width: 760px){
@@ -190,14 +201,6 @@ body.early .v-early{display:contents}
 <a class="nav-link" href="#privasi" style="color: #C3CBEA; text-decoration: none">Privasi</a>
 <a class="nav-link" href="#faq" style="color: #C3CBEA; text-decoration: none">FAQ</a>
 <a href="#cek-gratis" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Cek CV gratis</a>
-</nav>
-<nav class="mchips" aria-label="Lompat ke bagian">
-<a href="#paket" data-spy="paket">Paket</a>
-<a href="#cara-kerja" data-spy="cara-kerja">Cara kerja</a>
-<a href="#fitur" data-spy="fitur">Fitur</a>
-<a href="#cek-gratis" data-spy="cek-gratis">Cek gratis</a>
-<a href="#faq" data-spy="faq">FAQ</a>
-<a href="#privasi" data-spy="privasi">Privasi</a>
 </nav>
 </div>
 </header>
@@ -676,9 +679,31 @@ body.early .v-early{display:contents}
 </div>
 </footer>
 
-<div class="mbar" aria-label="Aksi cepat">
+<div class="mbar">
 <a class="mb-ghost" href="#paket">Lihat paket</a>
 <a class="mb-main" href="#cek-gratis">Cek CV gratis</a>
+<details class="mmenu">
+<summary class="mfab" aria-label="Buka menu"><svg class="ic-m" viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="ic-x" viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<nav class="msheet" aria-label="Menu">
+<p class="mono msh-t">LOMPAT KE</p>
+<div class="msh-grid">
+<a href="#kenapa" data-spy="kenapa">Kenapa kami</a>
+<a href="#cara-kerja" data-spy="cara-kerja">Cara kerja</a>
+<a href="#fitur" data-spy="fitur">Fitur</a>
+<a href="#paket" data-spy="paket">Paket &amp; harga</a>
+<a href="#cek-gratis" data-spy="cek-gratis">Cek CV gratis</a>
+<a href="#privasi" data-spy="privasi">Privasi</a>
+<a href="#faq" data-spy="faq">FAQ</a>
+<a href="https://wa.me/6285335831672">WhatsApp</a>
+</div>
+<p class="mono msh-t">DOKUMEN</p>
+<div class="msh-grid">
+<a href="panduan.html">Panduan klien</a>
+<a href="syarat.html">Syarat &amp; ketentuan</a>
+<a href="privasi.html">Kebijakan privasi</a>
+</div>
+</nav>
+</details>
 </div>
 
 </div>
@@ -711,19 +736,24 @@ body.early .v-early{display:contents}
     });
   });
   var mq=window.matchMedia('(max-width: 760px)');
+  // Menu mengambang: tutup setelah memilih tujuan atau menekan Esc
+  var menu=document.querySelector('.mmenu');
+  if(menu){
+    menu.querySelectorAll('.msheet a').forEach(function(l){ l.addEventListener('click',function(){ menu.removeAttribute('open'); }); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') menu.removeAttribute('open'); });
+  }
   // Fitur: di HP tampil ringkas, ketuk untuk detail
   if(mq.matches) document.querySelectorAll('details.xtra').forEach(function(d){ d.removeAttribute('open'); });
   if(mq.matches) document.querySelectorAll('details.feat').forEach(function(d){ d.removeAttribute('open'); });
   if('IntersectionObserver' in window){
     // Chip navigasi menandai bagian yang sedang dibaca
-    var chips={}, bar=document.querySelector('.mchips');
-    document.querySelectorAll('.mchips a[data-spy]').forEach(function(a){ chips[a.getAttribute('data-spy')]=a; });
+    var chips={};
+    document.querySelectorAll('.msheet a[data-spy]').forEach(function(a){ chips[a.getAttribute('data-spy')]=a; });
     var spy=new IntersectionObserver(function(es){
       es.forEach(function(e){
         if(!e.isIntersecting) return;
         var id=e.target.id;
         Object.keys(chips).forEach(function(k){ chips[k].classList.toggle('on',k===id); });
-        var c=chips[id]; if(c && bar) bar.scrollTo({left:c.offsetLeft-bar.offsetLeft-8,behavior:'smooth'});
       });
     },{rootMargin:'-45% 0px -50% 0px'});
     Object.keys(chips).forEach(function(k){ var el=document.getElementById(k); if(el) spy.observe(el); });

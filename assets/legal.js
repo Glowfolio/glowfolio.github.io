@@ -1,5 +1,11 @@
 /* Glowfolio — dokumen panjang di HP: daftar isi menempel di atas dan bagian bisa dilipat. */
 (function () {
+  // menu mengambang di HP: tutup setelah memilih tujuan atau menekan Esc
+  var menu = document.querySelector('.mmenu');
+  if (menu) {
+    menu.querySelectorAll('.msheet a').forEach(function (l) { l.addEventListener('click', function () { menu.removeAttribute('open'); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') menu.removeAttribute('open'); });
+  }
   var toc = document.querySelector('.toc-mobile');
   var secs = [].slice.call(document.querySelectorAll('.doc section[id]'));
   if (!toc || !secs.length) return;
