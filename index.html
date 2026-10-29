@@ -70,6 +70,103 @@ details[open] .chev{transform:rotate(45deg)}
 .cmp th,.cmp td{display:block;padding:0 !important}
 .cmp td::before{content:attr(data-label);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7E8AB8;margin-top:6px}
 }
+html{scroll-padding-top:76px}
+.m-only{display:none}
+.mchips,.ptabs,.mbar{display:none}
+.feat summary{list-style:none;cursor:default}
+.feat summary::-webkit-details-marker{display:none}
+@media (min-width: 761px){.feat summary{pointer-events:none}}
+.pt{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #2F3B74;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:#C3CBEA;white-space:nowrap;flex:none}
+.pt.on{background:var(--accent);border-color:var(--accent);color:#04122A}
+@media (max-width: 760px){
+.d-only{display:none !important}
+.m-only{display:block}
+span.m-only{display:inline}
+.dnav{display:none !important}
+.head-in{padding:8px 16px !important;flex-wrap:nowrap !important;gap:10px !important}
+.head-in .wm{display:none}
+.head-in img{width:34px !important;height:34px !important}
+.mchips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0;margin-right:-16px;padding-right:16px;-webkit-overflow-scrolling:touch}
+.mchips::-webkit-scrollbar{display:none}
+.mchips a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #2F3B74;color:#C3CBEA;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;flex:none}
+.mchips a.on{background:var(--accent);border-color:var(--accent);color:#04122A}
+.hero{padding:28px 20px 36px !important;gap:24px !important}
+.hero > div{gap:16px !important}
+.hero h1{font-size:31px !important;line-height:1.12 !important}
+.lead{font-size:15.5px !important;line-height:1.55}
+.trust{gap:6px !important;font-size:12.5px !important}
+.trust span{padding:5px 10px;border:1px solid #1C2756;border-radius:999px;background:#0B1233}
+.cta-row{flex-wrap:nowrap !important;gap:10px !important}
+.cta-row > a{flex:1 1 0 !important;justify-content:center;min-height:48px !important;padding:0 12px !important;font-size:15px !important;text-align:center}
+.hero-fig{max-width:270px !important;margin:0 auto !important}
+.hero-fig figcaption{display:none}
+.sec{padding:40px 20px !important;gap:20px !important}
+section h2.disp{font-size:24px !important;line-height:1.2 !important}
+.swipe-hint{display:none !important}
+.swipe{margin:0 -20px !important;padding:2px 20px 10px !important;scroll-padding:0 20px}
+.swipe > *{flex:0 0 82%}
+.cmp{margin:0 -20px !important}
+.cmp tbody{padding:2px 20px 10px !important;scroll-padding:0 20px}
+.cmp tr{padding:16px !important;flex-basis:82% !important}
+.cmp td{font-size:14.5px}
+.steps{display:flex !important;flex-direction:column;gap:10px !important}
+.steps .card{padding:16px 18px !important;gap:4px !important}
+.steps .card h3{font-size:17px !important}
+.steps .card p{font-size:14px !important;line-height:1.5}
+.feats{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+.feat{padding:14px !important;gap:8px !important;position:relative}
+.feat summary{cursor:pointer;gap:8px !important;padding-right:18px}
+.feat summary svg{width:28px !important;height:28px !important}
+.feat summary h3{font-size:15px !important;line-height:1.3}
+.feat summary::after{content:"+";position:absolute;top:10px;right:12px;color:var(--accent);font-size:20px;line-height:1;transition:transform .2s}
+.feat[open] summary::after{transform:rotate(45deg)}
+.feat[open]{grid-column:1 / -1}
+.feat p{font-size:14px !important;line-height:1.55}
+.pk-head{gap:14px !important}
+.ptabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px}
+.ptabs::-webkit-scrollbar{display:none}
+.pricing{display:block !important}
+.pricing > article{display:none !important;padding:20px 18px !important;gap:14px !important}
+.pricing.show-ats > .pk-ats,.pricing.show-sig > .pk-sig,.pricing.show-web > .pk-web,.pricing.show-pro > .pk-pro,.pricing.show-kit > .pk-kit{display:flex !important}
+.pricing p{min-height:0 !important}
+.pricing li{font-size:14px}
+.pricing .badge{position:static !important;align-self:flex-start}
+.fine{font-size:12px !important}
+.guar{padding:12px 14px !important;gap:8px !important;font-size:13.5px !important}
+.guar a{min-height:36px !important}
+.seg{min-height:40px}
+.extras > div{padding:18px !important;gap:10px !important}
+.extras dl > div{padding:9px 0 !important;font-size:14px}
+.rapor{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px !important;padding:14px !important}
+.rapor .rtitle{grid-column:1 / -1}
+.rrow{flex-direction:column;gap:2px !important;padding:10px 12px !important;border:1px solid #1C2756 !important;border-radius:12px;font-size:13.5px;line-height:1.35}
+.rrow .mono{font-size:12px}
+.pv-lead{font-size:14.5px !important;line-height:1.55}
+.priv p{font-size:14px !important}
+#faq summary{font-size:15.5px !important;min-height:54px !important}
+#faq details p{font-size:14.5px}
+.cta-logo{display:none}
+.foot-in{display:grid !important;grid-template-columns:1fr 1fr;gap:20px 16px !important;padding:28px 20px 104px !important}
+.foot-in > div:first-child,.foot-in > div:last-child{grid-column:1 / -1}
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(6,10,31,0.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #1C2756;transition:transform .25s ease}
+.mbar.off{transform:translateY(130%)}
+.mbar a{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none}
+.mbar .mb-ghost{border:1px solid #2F3B74;color:#EAF0FF}
+.mbar .mb-main{background:var(--accent);color:#04122A}
+}
+.xtra-sum{display:none}
+@media (max-width: 760px){
+.xtra .seg-wrap{margin-bottom:12px}
+.xtra{background:#0B1233;border:1px solid #1C2756;border-radius:16px;padding:0 14px}
+.xtra[open]{padding-bottom:14px}
+.xtra-sum{display:flex;list-style:none;cursor:pointer;min-height:54px;align-items:center;justify-content:space-between;font-weight:600;color:#EAF0FF}
+.xtra-sum::-webkit-details-marker{display:none}
+.xtra-sum span{color:var(--accent);font-size:22px;transition:transform .2s}
+.xtra[open] .xtra-sum span{transform:rotate(45deg)}
+.xtra .extras > div{background:transparent !important;border:0 !important;padding:6px 2px 0 !important}
+.steps .card{gap:2px !important;padding:14px 16px !important}
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce){.mbar{transition:none}}
 
 .v-normal,.v-early{display:contents}
 .v-early{display:none}
@@ -80,19 +177,27 @@ body.early .v-early{display:contents}
 <body>
 <div style="--accent: #38D9F5; background: #060A1F; color: #EAF0FF; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh">
 
-<header style="border-bottom: 1px solid #141C45; position: relative">
-<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #EAF0FF">
+<header style="border-bottom: 1px solid #141C45; position: sticky; top: 0; z-index: 30; background: rgba(6,10,31,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px)">
+<div class="head-in" style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" aria-label="Glowfolio, ke atas" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #EAF0FF; flex: none">
 <img src="assets/glowfolio-logo.png" alt="Logo Glowfolio" style="width: 40px; height: 40px; object-fit: contain">
-<span class="disp" style="font-size: 20px; font-weight: 700">Glowfolio</span>
+<span class="disp wm" style="font-size: 20px; font-weight: 700">Glowfolio</span>
 </a>
-<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px">
+<nav class="dnav" aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px">
 <a class="nav-link" href="#cara-kerja" style="color: #C3CBEA; text-decoration: none">Cara kerja</a>
 <a class="nav-link" href="#fitur" style="color: #C3CBEA; text-decoration: none">Fitur</a>
 <a class="nav-link" href="#paket" style="color: #C3CBEA; text-decoration: none">Paket</a>
 <a class="nav-link" href="#privasi" style="color: #C3CBEA; text-decoration: none">Privasi</a>
 <a class="nav-link" href="#faq" style="color: #C3CBEA; text-decoration: none">FAQ</a>
 <a href="#cek-gratis" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Cek CV gratis</a>
+</nav>
+<nav class="mchips" aria-label="Lompat ke bagian">
+<a href="#paket" data-spy="paket">Paket</a>
+<a href="#cara-kerja" data-spy="cara-kerja">Cara kerja</a>
+<a href="#fitur" data-spy="fitur">Fitur</a>
+<a href="#cek-gratis" data-spy="cek-gratis">Cek gratis</a>
+<a href="#faq" data-spy="faq">FAQ</a>
+<a href="#privasi" data-spy="privasi">Privasi</a>
 </nav>
 </div>
 </header>
@@ -101,18 +206,19 @@ body.early .v-early{display:contents}
 <div style="display: flex; flex-direction: column; gap: 24px">
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">JASA CV PERSONAL BRANDING · INDONESIA</div>
 <h1 class="disp" style="margin: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1.08; font-weight: 700">CV yang terdengar seperti kamu, dan tetap mudah dibaca sistem ATS.</h1>
-<p class="lead" style="margin: 0; font-size: 18px; color: #B4BEE3; max-width: 540px">Kita ngobrol dulu soal perjalanan kariermu, lalu kami susun jadi tiga versi: CV ATS untuk sistem rekrutmen, CV visual untuk HR, dan web CV dengan ilustrasi keren yang enak dibuka di HP maupun laptop.</p>
+<p class="lead m-only" style="margin: 0; color: #B4BEE3">Tiga versi CV dari satu cerita: CV ATS, CV visual, dan web CV dengan ilustrasi keren.</p>
+<p class="lead d-only" style="margin: 0; font-size: 18px; color: #B4BEE3; max-width: 540px">Kita ngobrol dulu soal perjalanan kariermu, lalu kami susun jadi tiga versi: CV ATS untuk sistem rekrutmen, CV visual untuk HR, dan web CV dengan ilustrasi keren yang enak dibuka di HP maupun laptop.</p>
 <div class="cta-row" style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#cek-gratis" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; font-size: 16px; text-decoration: none">Cek CV-ku gratis</a>
-<a href="#paket" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; font-size: 16px; text-decoration: none">Lihat paket mulai Rp49 rb</a>
+<a href="#paket" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; font-size: 16px; text-decoration: none">Lihat paket<span class="d-only">&nbsp;mulai Rp49 rb</span></a>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; color: #9AA6CF">
+<div class="trust" style="display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; color: #9AA6CF">
 <span>Ditulis bersama, bukan diisi template</span>
 <span>Web CV milikmu sendiri</span>
 <span>Data pribadi dijaga</span>
 </div>
 </div>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<figure class="hero-fig" style="margin: 0; display: flex; flex-direction: column; gap: 10px">
 <svg viewBox="0 0 640 530" role="img" aria-label="Ilustrasi isometrik tiga lapisan output Glowfolio: CV ATS, CV visual, dan web CV" style="width: 100%; height: auto; display: block">
 <polygon class="pl-side" points="130,420 280,495 280,503 130,428"></polygon>
 <polygon class="pl-side" points="280,495 430,420 430,428 280,503"></polygon>
@@ -160,7 +266,7 @@ body.early .v-early{display:contents}
 </figure>
 </section>
 
-<section aria-labelledby="beda-title" style="border-top: 1px solid #141C45; background: #080D27">
+<section id="kenapa" aria-labelledby="beda-title" style="border-top: 1px solid #141C45; background: #080D27">
 <div class="sec" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">01 — KENAPA GLOWFOLIO</div>
@@ -194,26 +300,30 @@ body.early .v-early{display:contents}
 <h2 id="cara-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Empat langkah dari CV lama ke CV baru.</h2>
 </div>
 <p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">4 LANGKAH · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
-<ol class="swipe steps" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<ol class="steps" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
 <li class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span class="mono" style="font-size: 13px; color: var(--accent)">STEP 01</span>
 <h3 class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Cek CV gratis</h3>
-<p style="margin: 0; color: #B4BEE3; font-size: 15px">Kirim CV yang kamu pakai sekarang. Kami beri skor keterbacaan ATS, kekuatan poin pencapaian, dan kesan visual, plus 3 saran perbaikan.</p>
+<p class="m-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Kirim CV-mu, dapat skor dan 3 saran perbaikan.</p>
+<p class="d-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Kirim CV yang kamu pakai sekarang. Kami beri skor keterbacaan ATS, kekuatan poin pencapaian, dan kesan visual, plus 3 saran perbaikan.</p>
 </li>
 <li class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span class="mono" style="font-size: 13px; color: var(--accent)">STEP 02</span>
 <h3 class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Isi Brand Brief</h3>
-<p style="margin: 0; color: #B4BEE3; font-size: 15px">Ceritakan posisi yang kamu incar, pengalamanmu, dan gaya yang kamu suka. Setelah itu kita lanjut tanya jawab singkat lewat chat atau call.</p>
+<p class="m-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Ceritakan target dan pengalamanmu, lalu tanya jawab singkat.</p>
+<p class="d-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Ceritakan posisi yang kamu incar, pengalamanmu, dan gaya yang kamu suka. Setelah itu kita lanjut tanya jawab singkat lewat chat atau call.</p>
 </li>
 <li class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span class="mono" style="font-size: 13px; color: var(--accent)">STEP 03</span>
 <h3 class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Kami susun</h3>
-<p style="margin: 0; color: #B4BEE3; font-size: 15px">Dari jawabanmu, kami susun CV ATS, CV visual, dan web CV, lengkap dengan ilustrasi yang sesuai profesimu.</p>
+<p class="m-only" style="margin: 0; color: #B4BEE3; font-size: 15px">CV ATS, CV visual, dan web CV dengan ilustrasi profesimu.</p>
+<p class="d-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Dari jawabanmu, kami susun CV ATS, CV visual, dan web CV, lengkap dengan ilustrasi yang sesuai profesimu.</p>
 </li>
 <li class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span class="mono" style="font-size: 13px; color: var(--accent)">STEP 04</span>
 <h3 class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Revisi &amp; selesai</h3>
-<p style="margin: 0; color: #B4BEE3; font-size: 15px">Kamu bisa minta revisi sesuai jatah paket. Setelah oke, web CV dipasang di akun GitHub Pages milikmu, jadi sepenuhnya milikmu.</p>
+<p class="m-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Revisi sesuai jatah, lalu web CV dipasang di GitHub-mu.</p>
+<p class="d-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Kamu bisa minta revisi sesuai jatah paket. Setelah oke, web CV dipasang di akun GitHub Pages milikmu, jadi sepenuhnya milikmu.</p>
 </li>
 </ol>
 </section>
@@ -225,57 +335,58 @@ body.early .v-early{display:contents}
 <h2 id="fitur-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Yang kamu dapat selain CV yang rapi.</h2>
 </div>
 <p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">8 FITUR · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
-<div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><polygon class="ac" points="8,24 24,16 40,24 24,32"></polygon><line class="ac" x1="24" y1="8" x2="24" y2="16"></line><line class="ac" x1="24" y1="32" x2="24" y2="40"></line></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Personal Brand Brief</h3>
+<div class="feats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><polygon class="ac" points="8,24 24,16 40,24 24,32"></polygon><line class="ac" x1="24" y1="8" x2="24" y2="16"></line><line class="ac" x1="24" y1="32" x2="24" y2="40"></line></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Personal Brand Brief</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Beberapa pertanyaan singkat soal target karier, gaya bahasa, dan tampilan yang kamu mau. Dari sini isi dan desain CV-mu ditentukan.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><circle class="ac" cx="20" cy="20" r="10"></circle><line class="ac" x1="28" y1="28" x2="40" y2="40"></line></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Gali cerita karier (STAR)</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><circle class="ac" cx="20" cy="20" r="10"></circle><line class="ac" x1="28" y1="28" x2="40" y2="40"></line></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Gali cerita karier (STAR)</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Kami bantu menggali pencapaian terbaikmu dengan pola Situation, Task, Action, Result. Angka hanya ditulis kalau memang ada datanya.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><polygon class="ac" points="8,14 24,6 40,14 24,22"></polygon><polygon class="ac" points="8,24 24,16 40,24 24,32" style="opacity: 0.7"></polygon><polygon class="ac" points="8,34 24,26 40,34 24,42" style="opacity: 0.45"></polygon></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Satu data, tiga output</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><polygon class="ac" points="8,14 24,6 40,14 24,22"></polygon><polygon class="ac" points="8,24 24,16 40,24 24,32" style="opacity: 0.7"></polygon><polygon class="ac" points="8,34 24,26 40,34 24,42" style="opacity: 0.45"></polygon></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Satu data, tiga output</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">CV ATS, CV visual, dan web CV berasal dari data yang sama. Kalau ada revisi, ketiganya ikut diperbarui.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><path class="spark" d="M24 6 Q26 20 40 24 Q26 28 24 42 Q22 28 8 24 Q22 20 24 6 Z"></path></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Ilustrasi khas profesimu</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><path class="spark" d="M24 6 Q26 20 40 24 Q26 28 24 42 Q22 28 8 24 Q22 20 24 6 Z"></path></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Ilustrasi khas profesimu</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Ilustrasi keren yang menggambarkan pekerjaanmu, misalnya server untuk backend, lab untuk QA pangan, atau kamera untuk kreator, dalam warna pilihanmu.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="14" y="6" width="20" height="36" rx="4"></rect><line class="ac" x1="20" y1="36" x2="28" y2="36"></line></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Web CV milikmu sendiri</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="14" y="6" width="20" height="36" rx="4"></rect><line class="ac" x1="20" y1="36" x2="28" y2="36"></line></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Web CV milikmu sendiri</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Nyaman dibuka di HP maupun laptop, dan ada QR code untuk LinkedIn atau bio. Karena dipasang di akun GitHub Pages-mu, web ini tetap bisa diakses walaupun kamu tidak lagi memakai jasa kami.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="10" y="20" width="28" height="20" rx="4"></rect><path class="ac" d="M16 20 V14 Q16 6 24 6 Q32 6 32 14 V20"></path></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Mode privasi</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="10" y="20" width="28" height="20" rx="4"></rect><path class="ac" d="M16 20 V14 Q16 6 24 6 Q32 6 32 14 V20"></path></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Mode privasi</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Nomor HP dan alamat tidak ditampilkan di web. Perekrut bisa menghubungimu lewat form, sementara data lengkap hanya ada di PDF.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="8" y="10" width="20" height="28" rx="3"></rect><path class="ac" d="M32 18 L40 24 L32 30"></path></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Varian per lowongan</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><rect class="ac" x="8" y="10" width="20" height="28" rx="3"></rect><path class="ac" d="M32 18 L40 24 L32 30"></path></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Varian per lowongan</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Kirim deskripsi lowongannya, lalu kami sesuaikan kata kunci CV-mu dan tunjukkan skor kecocokannya sebelum dan sesudah.</p>
-</article>
-<article class="card" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><path class="ac" d="M8 38 L18 26 L26 32 L40 14"></path><circle class="ac" cx="40" cy="14" r="3"></circle></svg>
-<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Statistik CV dibuka</h3>
+</details>
+<details class="card feat" open style="background: #0B1233; border: 1px solid #1C2756; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<summary style="display: flex; flex-direction: column; gap: 10px"><svg viewBox="0 0 48 48" aria-hidden="true" style="width: 40px; height: 40px"><path class="ac" d="M8 38 L18 26 L26 32 L40 14"></path><circle class="ac" cx="40" cy="14" r="3"></circle></svg>
+<h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Statistik CV dibuka</h3></summary>
 <p style="margin: 0; color: #B4BEE3; font-size: 15px">Lihat kapan dan berapa kali web CV-mu dibuka setelah kamu melamar. Data pribadi perekrut tidak ikut dikumpulkan.</p>
-</article>
+</details>
 </div>
 </div>
 </section>
 
 <section id="paket" aria-labelledby="paket-title" class="sec" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div class="pk-head" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">04 — PAKET &amp; HARGA</div>
 <h2 id="paket-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Pilih paket yang sesuai kebutuhanmu.</h2>
-<p style="margin: 0; color: #B4BEE3">Sekali bayar, tanpa langganan. Harga early bird berlaku untuk 10 klien pertama di tiap paket, dengan syarat kamu bersedia memberi testimoni dan mengizinkan hasilnya kami pajang.</p>
+<p class="m-only" style="margin: 0; color: #B4BEE3; font-size: 15px">Sekali bayar, tanpa langganan. Early bird untuk 10 klien pertama tiap paket.</p>
+<p class="d-only" style="margin: 0; color: #B4BEE3">Sekali bayar, tanpa langganan. Harga early bird berlaku untuk 10 klien pertama di tiap paket, dengan syarat kamu bersedia memberi testimoni dan mengizinkan hasilnya kami pajang.</p>
 </div>
 <div role="group" aria-label="Pilih tampilan harga" style="display: flex; gap: 4px; padding: 4px; border: 1px solid #2F3B74; border-radius: 999px; background: #0B1233">
 <span class="v-normal">
@@ -290,9 +401,16 @@ body.early .v-early{display:contents}
 </div>
 
 <p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">5 PAKET · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
-<div class="swipe pricing" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 212px), 1fr)); gap: 16px; align-items: stretch">
+<div class="ptabs" role="group" aria-label="Pilih paket">
+<button type="button" class="pt" data-pkg="ats" aria-pressed="false">Rapi ATS</button>
+<button type="button" class="pt" data-pkg="sig" aria-pressed="false">Signature</button>
+<button type="button" class="pt on" data-pkg="web" aria-pressed="true">Web Card</button>
+<button type="button" class="pt" data-pkg="pro" aria-pressed="false">Portfolio Pro</button>
+<button type="button" class="pt" data-pkg="kit" aria-pressed="false">Brand Kit</button>
+</div>
+<div class="pricing show-web" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 212px), 1fr)); gap: 16px; align-items: stretch">
 
-<article style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
+<article class="pk-ats" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Rapi ATS</h3>
 <p style="margin: 0; font-size: 14px; color: #9AA6CF; min-height: 44px">CV rapi yang mudah dibaca sistem ATS, selesai cepat.</p>
@@ -311,7 +429,7 @@ body.early .v-early{display:contents}
 <a href="#cek-gratis" style="display: inline-flex; justify-content: center; align-items: center; min-height: 46px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none">Pilih Rapi ATS</a>
 </article>
 
-<article style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
+<article class="pk-sig" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Signature</h3>
 <p style="margin: 0; font-size: 14px; color: #9AA6CF; min-height: 44px">Untuk kamu yang ingin CV-nya punya ciri khas.</p>
@@ -331,8 +449,8 @@ body.early .v-early{display:contents}
 <a href="#cek-gratis" style="display: inline-flex; justify-content: center; align-items: center; min-height: 46px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none">Pilih Signature</a>
 </article>
 
-<article style="background: #0D1540; border: 1px solid var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 40px -12px var(--accent); border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px; position: relative">
-<span class="mono" style="position: absolute; top: -12px; left: 22px; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: #04122A; font-size: 11px; font-weight: 500; letter-spacing: 0.08em">REKOMENDASI</span>
+<article class="pk-web" style="background: #0D1540; border: 1px solid var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 40px -12px var(--accent); border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px; position: relative">
+<span class="mono badge" style="position: absolute; top: -12px; left: 22px; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: #04122A; font-size: 11px; font-weight: 500; letter-spacing: 0.08em">REKOMENDASI</span>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Web Card</h3>
 <p style="margin: 0; font-size: 14px; color: #9AA6CF; min-height: 44px">CV yang bisa dibuka dari mana saja.</p>
@@ -353,7 +471,7 @@ body.early .v-early{display:contents}
 <a href="#cek-gratis" style="display: inline-flex; justify-content: center; align-items: center; min-height: 46px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Pilih Web Card</a>
 </article>
 
-<article style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
+<article class="pk-pro" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Portfolio Pro</h3>
 <p style="margin: 0; font-size: 14px; color: #9AA6CF; min-height: 44px">Untuk profesional yang punya karya untuk dipamerkan.</p>
@@ -375,7 +493,7 @@ body.early .v-early{display:contents}
 <a href="#cek-gratis" style="display: inline-flex; justify-content: center; align-items: center; min-height: 46px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none">Pilih Portfolio Pro</a>
 </article>
 
-<article style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
+<article class="pk-kit" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 26px 22px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 class="disp" style="margin: 0; font-size: 20px; font-weight: 600">Brand Kit</h3>
 <p style="margin: 0; font-size: 14px; color: #9AA6CF; min-height: 44px">CV, web, dan identitas visual dalam satu paket.</p>
@@ -398,13 +516,15 @@ body.early .v-early{display:contents}
 </article>
 
 </div>
-<p style="margin: 0; font-size: 13px; color: #7E8AB8">*Biaya domain ditanggung klien. Hari kerja dihitung sejak pembayaran terkonfirmasi dan Brand Brief lengkap.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; padding: 16px 22px; border: 1px solid #1C2756; border-radius: 14px; background: #0B1233; font-size: 15px">
+<p class="fine" style="margin: 0; font-size: 13px; color: #7E8AB8">*Biaya domain ditanggung klien. Hari kerja dihitung sejak pembayaran terkonfirmasi dan Brand Brief lengkap.</p>
+<div class="guar" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; padding: 16px 22px; border: 1px solid #1C2756; border-radius: 14px; background: #0B1233; font-size: 15px">
 <span style="display: flex; align-items: center; gap: 10px; color: #EAF0FF"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; flex: none"><path class="ac" d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"></path></svg>Refund penuh bila batal sebelum pengerjaan dimulai</span>
 <span style="display: flex; align-items: center; gap: 10px; color: #EAF0FF"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; flex: none"><path class="ac" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"></path><path class="ac" d="M9 12l2 2 4-4"></path></svg>Kami menjamin kualitas dokumen, bukan hasil rekrutmen</span>
 <a href="syarat.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--accent); font-weight: 600; text-decoration: none">Syarat &amp; ketentuan lengkap<span aria-hidden="true">→</span></a>
 </div>
 
+<details class="xtra" open>
+<summary class="xtra-sum">Add-on &amp; CV Care<span aria-hidden="true">+</span></summary>
 <div class="seg-wrap" role="group" aria-label="Pilih yang ingin dilihat" style="gap: 4px; padding: 4px; border: 1px solid #2F3B74; border-radius: 999px; background: #0B1233">
 <button type="button" class="seg on" data-extras="addon" aria-pressed="true">Add-on</button>
 <button type="button" class="seg" data-extras="care" aria-pressed="false">CV Care</button>
@@ -435,6 +555,7 @@ body.early .v-early{display:contents}
 </ul>
 </div>
 </div>
+</details>
 </section>
 
 <section id="cek-gratis" aria-labelledby="cek-title" style="border-top: 1px solid #141C45; background: #080D27">
@@ -444,16 +565,16 @@ body.early .v-early{display:contents}
 <h2 id="cek-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">Belum yakin? Cek CV-mu dulu, gratis.</h2>
 <p style="margin: 0; color: #B4BEE3">Kirim CV yang sekarang kamu pakai. Dalam 2 hari kerja kamu akan menerima rapor singkat, dan tidak ada kewajiban membeli paket.</p>
 <div class="cta-row" style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Kirim CV untuk dicek</a>
-<a href="https://wa.me/6285335831672" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none">Tanya via WhatsApp</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Kirim CV<span class="d-only">&nbsp;untuk dicek</span></a>
+<a href="https://wa.me/6285335831672" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none"><span class="d-only">Tanya via&nbsp;</span>WhatsApp</a>
 </div>
 </div>
-<div style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div class="mono" style="font-size: 12px; color: #7E8AB8; letter-spacing: 0.08em">RAPOR CEK CV GRATIS</div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Keterbacaan ATS</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Kekuatan poin pencapaian</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Kesan visual</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0"><span>Saran perbaikan</span><span class="mono" style="color: #9AA6CF">3 poin prioritas</span></div>
+<div class="rapor" style="background: #0B1233; border: 1px solid #1C2756; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div class="mono rtitle" style="font-size: 12px; color: #7E8AB8; letter-spacing: 0.08em">RAPOR CEK CV GRATIS</div>
+<div class="rrow" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Keterbacaan ATS</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
+<div class="rrow" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Kekuatan poin pencapaian</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
+<div class="rrow" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1C2756"><span>Kesan visual</span><span class="mono" style="color: #9AA6CF">skor 0–100</span></div>
+<div class="rrow" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0"><span>Saran perbaikan</span><span class="mono" style="color: #9AA6CF">3 poin prioritas</span></div>
 </div>
 </div>
 </section>
@@ -462,7 +583,7 @@ body.early .v-early{display:contents}
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
 <div class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: var(--accent)">06 — KERAHASIAAN DATA</div>
 <h2 id="privasi-title" class="disp" style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; font-weight: 700">CV berisi banyak data pribadi. Kami menjaganya baik-baik.</h2>
-<p style="margin: 0; color: #B4BEE3">Kami mengikuti prinsip Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi: data yang dikumpulkan hanya yang perlu, dipakai hanya untuk pesananmu, lalu dihapus setelah selesai.</p>
+<p class="pv-lead" style="margin: 0; color: #B4BEE3">Kami mengikuti prinsip Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi: data yang dikumpulkan hanya yang perlu, dipakai hanya untuk pesananmu, lalu dihapus setelah selesai.</p>
 </div>
 <p class="swipe-hint mono" style="margin: 0; font-size: 11px; letter-spacing: 0.1em; color: #7E8AB8; align-items: center; gap: 8px">3 JANJI PRIVASI · GESER<span aria-hidden="true" style="color: var(--accent)">→</span></p>
 <div class="swipe" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
@@ -523,18 +644,18 @@ body.early .v-early{display:contents}
 
 <section aria-labelledby="cta-title" style="border-top: 1px solid #141C45">
 <div class="sec" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
-<img src="assets/glowfolio-logo.png" alt="" style="width: 88px; height: 88px; object-fit: contain">
+<img class="cta-logo" src="assets/glowfolio-logo.png" alt="" style="width: 88px; height: 88px; object-fit: contain">
 <h2 id="cta-title" class="disp" style="margin: 0; font-size: clamp(30px, 4vw, 50px); line-height: 1.1; font-weight: 700; max-width: 760px">Siap merapikan CV-mu?</h2>
 <p style="margin: 0; color: #B4BEE3; max-width: 560px">Mulai saja dari cek gratis. Kalau cocok, kamu bisa lanjut ke paket yang pas. Kalau belum, rapornya tetap boleh kamu simpan.</p>
 <div class="cta-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
 <a href="#cek-gratis" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: var(--accent); color: #04122A; font-weight: 700; text-decoration: none">Cek CV-ku gratis</a>
-<a href="#paket" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none">Bandingkan paket</a>
+<a href="#paket" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2F3B74; color: #EAF0FF; font-weight: 600; text-decoration: none"><span class="d-only">Bandingkan paket</span><span class="m-only">Lihat paket</span></a>
 </div>
 </div>
 </section>
 
 <footer style="border-top: 1px solid #141C45; background: #050818">
-<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: #9AA6CF">
+<div class="foot-in" style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: #9AA6CF">
 <div style="display: flex; flex-direction: column; gap: 8px">
 <div style="display: flex; align-items: center; gap: 10px">
 <img src="assets/glowfolio-logo.png" alt="" style="width: 28px; height: 28px; object-fit: contain">
@@ -543,7 +664,7 @@ body.early .v-early{display:contents}
 </div>
 <span>Studio CV personal branding · Jakarta</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="color: rgb(234, 240, 255); font-weight: 600">Kontak</span><span>[EMAIL]</span><span>+6285335831672</span><span>[HANDLE TIKTOK / INSTAGRAM]</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="color: #EAF0FF; font-weight: 600">Kontak</span><a href="https://wa.me/6285335831672" style="color: #9AA6CF">WhatsApp</a><span>+62 853-3583-1672</span></div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <span style="color: #EAF0FF; font-weight: 600">Informasi</span>
 <a href="syarat.html" style="color: #9AA6CF">Syarat &amp; ketentuan</a>
@@ -554,6 +675,11 @@ body.early .v-early{display:contents}
 <div style="width: 100%; border-top: 1px solid #141C45; padding-top: 20px; font-size: 13px; color: #7E8AB8">© 2026 Glowfolio. Harga dalam Rupiah dan dapat berubah sewaktu-waktu.</div>
 </div>
 </footer>
+
+<div class="mbar" aria-label="Aksi cepat">
+<a class="mb-ghost" href="#paket">Lihat paket</a>
+<a class="mb-main" href="#cek-gratis">Cek CV gratis</a>
+</div>
 
 </div>
 <script>
@@ -573,11 +699,41 @@ body.early .v-early{display:contents}
       });
     });
   });
-  // Di HP, carousel paket langsung menampilkan paket rekomendasi (Web Card).
-  var row=document.querySelector('.swipe.pricing');
-  if(row && row.scrollWidth>row.clientWidth){
-    var rec=row.children[2];
-    if(rec) row.scrollLeft=rec.offsetLeft-row.offsetLeft-24;
+  // Tab paket (HP)
+  var pricing=document.querySelector('.pricing');
+  document.querySelectorAll('button[data-pkg]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var k=btn.getAttribute('data-pkg');
+      pricing.className='pricing show-'+k;
+      document.querySelectorAll('button[data-pkg]').forEach(function(o){
+        var on=o===btn; o.classList.toggle('on',on); o.setAttribute('aria-pressed',on?'true':'false');
+      });
+    });
+  });
+  var mq=window.matchMedia('(max-width: 760px)');
+  // Fitur: di HP tampil ringkas, ketuk untuk detail
+  if(mq.matches) document.querySelectorAll('details.xtra').forEach(function(d){ d.removeAttribute('open'); });
+  if(mq.matches) document.querySelectorAll('details.feat').forEach(function(d){ d.removeAttribute('open'); });
+  if('IntersectionObserver' in window){
+    // Chip navigasi menandai bagian yang sedang dibaca
+    var chips={}, bar=document.querySelector('.mchips');
+    document.querySelectorAll('.mchips a[data-spy]').forEach(function(a){ chips[a.getAttribute('data-spy')]=a; });
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var id=e.target.id;
+        Object.keys(chips).forEach(function(k){ chips[k].classList.toggle('on',k===id); });
+        var c=chips[id]; if(c && bar) bar.scrollTo({left:c.offsetLeft-bar.offsetLeft-8,behavior:'smooth'});
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(chips).forEach(function(k){ var el=document.getElementById(k); if(el) spy.observe(el); });
+    // Bar aksi bawah: muncul setelah hero, sembunyi saat ajakan penutup terlihat
+    var mbar=document.querySelector('.mbar'), heroVis=true, endVis=false;
+    function upd(){ if(mbar) mbar.classList.toggle('off', heroVis||endVis); }
+    upd();
+    new IntersectionObserver(function(es){ heroVis=es[0].isIntersecting; upd(); }).observe(document.getElementById('top'));
+    var end=document.getElementById('cta-title');
+    if(end) new IntersectionObserver(function(es){ endVis=es[0].isIntersecting; upd(); }).observe(end.closest('section'));
   }
 })();
 </script>
