@@ -4,16 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Panduan Klien — Glowfolio</title>
-<meta name="description" content="Apa yang terjadi setelah kamu memesan di Glowfolio: mengisi Brand Brief, sesi tanya jawab, draf dan revisi, sampai menerima CV dan web CV.">
+<meta name="description" content="Lima langkah setelah kamu memesan di Glowfolio, dari pembayaran sampai CV dan web CV-mu jadi.">
 <meta name="theme-color" content="#060A1F">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/legal.css">
+<style>
+.page{max-width:1040px;margin:0 auto;padding:40px 24px 96px;display:flex;flex-direction:column;gap:44px}
+.page h2{margin:0 0 16px;font-size:clamp(22px,2.4vw,27px);font-weight:600}
+.ready{margin:0}
+.ready ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px 18px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s}
+.step:hover{border-color:var(--line-2)}
+.step-txt{display:flex;flex-direction:column;gap:4px}
+.step-n{font-size:12px;letter-spacing:.1em;color:var(--accent)}
+.step h3{margin:0;font-size:17px;font-weight:600}
+.step p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+svg.iso{width:100%;height:auto;display:block}
+.iso rect{vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.iso .ft{fill:#0E1740;stroke:#3A4785;stroke-width:1}
+.iso .ff{fill:#0B1233;stroke:#3A4785;stroke-width:1}
+.iso .fs{fill:#080E2A;stroke:#3A4785;stroke-width:1}
+.iso .dt{fill:none;stroke:#2F3B74;stroke-width:1}
+.iso .ln{fill:#3A4785}.iso .ln2{fill:#26326A}
+.iso .ink{fill:#04122A}
+.iso .gl,.iso .acf,.iso .acft{fill:var(--accent);filter:url(#gf-glow)}
+.iso .acft{stroke:var(--accent)}
+.iso .tx{font-family:'JetBrains Mono',monospace;font-size:7px;fill:var(--accent);letter-spacing:.06em}
+.step:hover .gl,.step:hover .acf{animation:gfpulse 1.2s ease-in-out infinite}
+@keyframes gfpulse{50%{opacity:.7}}
+@media (prefers-reduced-motion: reduce){.step:hover .gl,.step:hover .acf{animation:none}}
+.more{display:flex;flex-direction:column;gap:10px}
+.more details{background:var(--card);border:1px solid var(--line);border-radius:14px}
+.more summary{list-style:none;cursor:pointer;min-height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;color:var(--ink)}
+.more summary::-webkit-details-marker{display:none}
+.more summary span{color:var(--accent);font-size:22px;transition:transform .2s;flex:none}
+.more details[open] summary span{transform:rotate(45deg)}
+.more .body{padding:0 20px 18px;font-size:15.5px;line-height:1.65}
+.more .body p{margin:0 0 10px}.more .body ul{margin:0 0 10px;padding-left:20px}.more .body li{margin:0 0 6px}
+.more .body li::marker{color:var(--accent)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border:1px solid var(--line);border-top:2px solid var(--accent);border-radius:16px;padding:22px 24px}
+.contact p{margin:0;color:var(--ink)}.contact small{display:block;color:var(--muted);font-size:14px}
+@media (max-width: 1000px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width: 760px){
+  .page{padding:28px 20px 72px;gap:36px}
+  .ready ul{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .step{flex-direction:row;align-items:center;gap:14px;padding:12px 14px}
+  .step svg.iso{width:112px;flex:none}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#isi">Langsung ke isi</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<filter id="gf-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs></svg>
 
 <header class="top">
   <div class="top-in">
@@ -31,180 +80,97 @@
   <div class="hero-in">
     <div class="eyebrow mono">PANDUAN KLIEN</div>
     <h1 class="disp">Setelah kamu memesan</h1>
-    <p>Terima kasih sudah memesan di Glowfolio. Halaman ini menjelaskan apa saja yang akan terjadi dari pembayaran sampai CV-mu selesai, dan apa yang perlu kamu siapkan di setiap langkah.</p>
-    <div class="meta mono"><span>DIPERBARUI 29 OKTOBER 2026</span></div>
+    <p>Lima langkah dari pembayaran sampai CV-mu jadi. Cukup 2 menit untuk membacanya.</p>
   </div>
 </div>
 
-<div class="wrap">
-  <aside class="toc" aria-label="Daftar isi">
-    <p class="toc-title mono">DAFTAR ISI</p>
-    <ol>
-      <li><a href="#alur">1. Alurnya secara singkat</a></li>
-      <li><a href="#brief">2. Mengisi Brand Brief</a></li>
-      <li><a href="#tanya">3. Sesi tanya jawab</a></li>
-      <li><a href="#revisi">4. Draf dan revisi</a></li>
-      <li><a href="#hasil">5. Menerima hasil</a></li>
-      <li><a href="#github">6. Menyiapkan akun GitHub</a></li>
-      <li><a href="#kendala">7. Kalau ada kendala</a></li>
-      <li><a href="#data">8. Data pribadimu</a></li>
-      <li><a href="#kontak">9. Kontak</a></li>
+<main id="isi" class="page">
+  <div class="summary ready">
+    <h2 class="disp" style="font-size:20px;margin-bottom:12px">Siapkan dulu</h2>
+    <ul>
+      <li>Nomor order dari email Mayar</li>
+      <li>Tautan CV lama yang bisa dibuka siapa saja, atau pilih "belum punya CV" di form</li>
+      <li>Posisi yang kamu incar</li>
+      <li>Tautan lowongan, kalau ada</li>
+    </ul>
+  </div>
+
+  <section aria-labelledby="alur-t">
+    <h2 id="alur-t" class="disp">Alurnya</h2>
+    <ol class="steps">
+      <li class="step">
+        <svg class="iso" viewBox="-122.6 -76.0 279.8 236.0" role="img" aria-label="Ponsel dengan kode QR pembayaran yang menyala"><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 34.64 144.00)"><rect class="fs" width="130" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -112.58 59.00)"><rect class="ff" width="170" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="ft" width="170" height="130"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="dt" x="7" y="7" width="156" height="116" rx="6"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 93.53 93.00)"><rect class="fs" width="30" height="3"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 55.43 71.00)"><rect class="ff" width="44" height="3"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 81.41 56.00)"><rect class="ft" width="44" height="30"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 81.41 56.00)"><rect class="dt" x="0" y="7" width="44" height="5"/><rect class="dt" x="5" y="20" width="12" height="5"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 -24.25 91.00)"><rect class="fs" width="96" height="7"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -77.94 60.00)"><rect class="ff" width="62" height="7"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 5.20 12.00)"><rect class="ft" width="62" height="96"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 5.20 12.00)"><rect class="gl" x="5" y="8" width="52" height="76" rx="3"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 5.20 12.00)"><rect class="ink" x="14.0" y="22.0" width="5" height="5"/><rect class="ink" x="14.0" y="28.4" width="5" height="5"/><rect class="ink" x="20.4" y="22.0" width="5" height="5"/><rect class="ink" x="20.4" y="28.4" width="5" height="5"/><rect class="ink" x="33.2" y="22.0" width="5" height="5"/><rect class="ink" x="39.6" y="22.0" width="5" height="5"/><rect class="ink" x="39.6" y="28.4" width="5" height="5"/><rect class="ink" x="33.2" y="28.4" width="5" height="5"/><rect class="ink" x="14.0" y="41.2" width="5" height="5"/><rect class="ink" x="20.4" y="41.2" width="5" height="5"/><rect class="ink" x="14.0" y="47.6" width="5" height="5"/><rect class="ink" x="20.4" y="47.6" width="5" height="5"/><rect class="ink" x="26.8" y="34.8" width="5" height="5"/><rect class="ink" x="33.2" y="41.2" width="5" height="5"/><rect class="ink" x="39.6" y="47.6" width="5" height="5"/><rect class="ink" x="26.8" y="47.6" width="5" height="5"/><rect class="ink" x="39.6" y="34.8" width="5" height="5"/><rect class="ink" x="16" y="62" width="30" height="5" rx="2.5"/></g></svg>
+        <div class="step-txt"><span class="mono step-n">01</span><h3 class="disp">Bayar</h3><p>Checkout di Mayar. Tautan Brand Brief muncul setelah pembayaran.</p></div>
+      </li>
+      <li class="step">
+        <svg class="iso" viewBox="-122.6 -76.0 279.8 236.0" role="img" aria-label="Form Brand Brief dengan kotak centang yang menyala"><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 34.64 144.00)"><rect class="fs" width="130" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -112.58 59.00)"><rect class="ff" width="170" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="ft" width="170" height="130"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="dt" x="7" y="7" width="156" height="116" rx="6"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 15.59 113.00)"><rect class="fs" width="96" height="4"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -74.48 61.00)"><rect class="ff" width="104" height="4"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 8.66 13.00)"><rect class="ft" width="104" height="96"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 60.62 43.00)"><rect class="fs" width="10" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 36.37 29.00)"><rect class="ff" width="28" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 45.03 24.00)"><rect class="ft" width="28" height="10"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 8.66 13.00)"><rect class="acf" x="10" y="14" width="9" height="9" rx="1.5"/><rect class="ln" x="26" y="15.5" width="60" height="2"/><rect class="ln2" x="26" y="20" width="40" height="2"/><rect class="acf" x="10" y="34" width="9" height="9" rx="1.5"/><rect class="ln" x="26" y="35.5" width="52" height="2"/><rect class="ln2" x="26" y="40" width="46" height="2"/><rect class="acf" x="10" y="54" width="9" height="9" rx="1.5"/><rect class="ln" x="26" y="55.5" width="44" height="2"/><rect class="ln2" x="26" y="60" width="52" height="2"/><rect class="dt" x="10" y="74" width="9" height="9" rx="1.5"/><rect class="ln" x="26" y="75.5" width="36" height="2"/><rect class="ln2" x="26" y="80" width="58" height="2"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 19.05 101.00)"><rect class="fs" width="64" height="4"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 12.12 97.00)"><rect class="ff" width="8" height="4"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 67.55 65.00)"><rect class="acft" width="8" height="64"/></g></svg>
+        <div class="step-txt"><span class="mono step-n">02</span><h3 class="disp">Isi Brand Brief</h3><p>Sekitar 10 menit. Hari kerja mulai dihitung setelah form lengkap.</p></div>
+      </li>
+      <li class="step">
+        <svg class="iso" viewBox="-122.6 -76.0 279.8 236.0" role="img" aria-label="Dua gelembung chat, balasan yang menyala"><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 34.64 144.00)"><rect class="fs" width="130" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -112.58 59.00)"><rect class="ff" width="170" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="ft" width="170" height="130"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="dt" x="7" y="7" width="156" height="116" rx="6"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 98.73 21.00)"><rect class="fs" width="6" height="62"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 32.91 -17.00)"><rect class="ff" width="76" height="62"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 38.11 -20.00)"><rect class="ft" width="76" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 32.91 -17.00)"><rect class="gl" x="6" y="6" width="64" height="38" rx="4"/><rect class="ink" x="13" y="15" width="44" height="4"/><rect class="ink" x="13" y="24" width="32" height="4"/><rect class="ink" x="13" y="33" width="38" height="4"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 10.39 34.00)"><rect class="fs" width="6" height="52"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -55.43 -4.00)"><rect class="ff" width="76" height="52"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 -50.23 -7.00)"><rect class="ft" width="76" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -55.43 -4.00)"><rect class="dt" x="6" y="6" width="64" height="30" rx="4"/><rect class="ln" x="13" y="14" width="40" height="3"/><rect class="ln" x="13" y="23" width="28" height="3"/></g></svg>
+        <div class="step-txt"><span class="mono step-n">03</span><h3 class="disp">Tanya jawab</h3><p>Kami chat lewat WhatsApp dalam 1 hari kerja. Jawab santai saja.</p></div>
+      </li>
+      <li class="step">
+        <svg class="iso" viewBox="-122.6 -76.0 279.8 236.0" role="img" aria-label="Lembar draf CV dengan baris revisi yang menyala"><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 34.64 144.00)"><rect class="fs" width="130" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -112.58 59.00)"><rect class="ff" width="170" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="ft" width="170" height="130"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="dt" x="7" y="7" width="156" height="116" rx="6"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 65.82 -28.00)"><rect class="fs" width="4" height="94"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 3.46 -64.00)"><rect class="ff" width="72" height="94"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 6.93 -66.00)"><rect class="ft" width="72" height="4"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 60.62 1.00)"><rect class="fs" width="4" height="94"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -1.73 -35.00)"><rect class="ff" width="72" height="94"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 1.73 -37.00)"><rect class="ft" width="72" height="4"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -1.73 -35.00)"><rect class="ln" x="10" y="12" width="40" height="3"/><rect class="ln" x="10" y="24" width="52" height="3"/><rect class="ln" x="10" y="32" width="46" height="3"/><rect class="ln" x="10" y="40" width="50" height="3"/><rect class="ln" x="10" y="62" width="48" height="3"/><rect class="ln" x="10" y="70" width="38" height="3"/><rect class="gl" x="7" y="48" width="58" height="9" rx="2"/><text class="tx" x="10" y="88">REV 1/3</text></g></svg>
+        <div class="step-txt"><span class="mono step-n">04</span><h3 class="disp">Draf &amp; revisi</h3><p>Kirim semua masukan dalam satu pesan. Masa revisi 14 hari.</p></div>
+      </li>
+      <li class="step">
+        <svg class="iso" viewBox="-122.6 -76.0 279.8 236.0" role="img" aria-label="Laptop menampilkan web CV yang menyala dan file PDF"><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 34.64 144.00)"><rect class="fs" width="130" height="6"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -112.58 59.00)"><rect class="ff" width="170" height="6"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="ft" width="170" height="130"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 -6.00)"><rect class="dt" x="7" y="7" width="156" height="116" rx="6"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 65.82 6.00)"><rect class="fs" width="4" height="64"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -20.78 -44.00)"><rect class="ff" width="100" height="64"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 -17.32 -46.00)"><rect class="ft" width="100" height="4"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -20.78 -44.00)"><rect class="gl" x="6" y="6" width="88" height="52" rx="2"/><rect class="ink" x="13" y="13" width="14" height="14" rx="7"/><rect class="ink" x="32" y="15" width="40" height="4"/><rect class="ink" x="32" y="23" width="28" height="3"/><rect class="ink" x="13" y="34" width="74" height="3"/><rect class="ink" x="13" y="41" width="60" height="3"/><rect class="ink" x="13" y="48" width="66" height="3"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 8.66 99.00)"><rect class="fs" width="66" height="4"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 -77.94 49.00)"><rect class="ff" width="100" height="4"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 -20.78 16.00)"><rect class="ft" width="100" height="66"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 -20.78 16.00)"><rect class="dt" x="10.0" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="18.4" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="26.8" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="35.2" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="43.6" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="52.0" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="60.4" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="68.8" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="77.2" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="85.6" y="10" width="6.6" height="6.6" rx="1"/><rect class="dt" x="10.0" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="18.4" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="26.8" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="35.2" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="43.6" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="52.0" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="60.4" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="68.8" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="77.2" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="85.6" y="19" width="6.6" height="6.6" rx="1"/><rect class="dt" x="10.0" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="18.4" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="26.8" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="35.2" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="43.6" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="52.0" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="60.4" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="68.8" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="77.2" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="85.6" y="28" width="6.6" height="6.6" rx="1"/><rect class="dt" x="10.0" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="18.4" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="26.8" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="35.2" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="43.6" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="52.0" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="60.4" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="68.8" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="77.2" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="85.6" y="37" width="6.6" height="6.6" rx="1"/><rect class="dt" x="34" y="50" width="32" height="10" rx="2"/></g><g transform="matrix(0.8660 -0.5000 0.0000 1.0000 45.03 125.00)"><rect class="fs" width="46" height="3"/></g><g transform="matrix(0.8660 0.5000 0.0000 1.0000 15.59 108.00)"><rect class="ff" width="34" height="3"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 55.43 85.00)"><rect class="ft" width="34" height="46"/></g><g transform="matrix(0.8660 0.5000 -0.8660 0.5000 55.43 85.00)"><rect class="acf" x="5" y="5" width="12" height="7" rx="1"/><rect class="ln" x="5" y="17" width="24" height="2"/><rect class="ln" x="5" y="23" width="20" height="2"/><rect class="ln" x="5" y="29" width="22" height="2"/></g></svg>
+        <div class="step-txt"><span class="mono step-n">05</span><h3 class="disp">Terima hasil</h3><p>PDF dikirim, web CV dipasang di akun GitHub-mu.</p></div>
+      </li>
     </ol>
-  </aside>
+  </section>
 
-  <main id="isi" class="doc">
-    <details class="toc-mobile">
-      <summary>Daftar isi <span aria-hidden="true">+</span></summary>
-      <ol>
-        <li><a href="#alur">1. Alurnya secara singkat</a></li>
-        <li><a href="#brief">2. Mengisi Brand Brief</a></li>
-        <li><a href="#tanya">3. Sesi tanya jawab</a></li>
-        <li><a href="#revisi">4. Draf dan revisi</a></li>
-        <li><a href="#hasil">5. Menerima hasil</a></li>
-        <li><a href="#github">6. Menyiapkan akun GitHub</a></li>
-        <li><a href="#kendala">7. Kalau ada kendala</a></li>
-        <li><a href="#data">8. Data pribadimu</a></li>
-        <li><a href="#kontak">9. Kontak</a></li>
-      </ol>
-    </details>
-
-    <div class="summary">
-      <h2 class="disp">Siapkan ini sebelum mulai</h2>
-      <p class="note">Tidak harus lengkap semua. Yang belum ada bisa menyusul saat sesi tanya jawab.</p>
-      <ul>
-        <li>Nomor order dari email Mayar, karena diminta di pertanyaan pertama Brand Brief.</li>
-        <li>CV lama dalam bentuk tautan Google Drive atau PDF, dengan akses "siapa saja yang memiliki link". Belum punya CV? Tidak apa-apa, form-nya akan memandumu.</li>
-        <li>Posisi yang kamu incar, paling banyak tiga.</li>
-        <li>Satu atau dua tautan lowongan yang ingin kamu lamar, kalau ada.</li>
-        <li>Sekitar 10 menit waktu luang untuk mengisi form.</li>
-      </ul>
+  <section aria-labelledby="waktu-t">
+    <h2 id="waktu-t" class="disp">Lama pengerjaan</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th scope="col">Paket</th><th scope="col">Draf pertama</th><th scope="col">Revisi</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Rapi ATS</th><td data-label="Draf pertama">2 hari kerja</td><td data-label="Revisi">2 kali</td></tr>
+          <tr><th scope="row">Signature</th><td data-label="Draf pertama">3 hari kerja</td><td data-label="Revisi">3 kali</td></tr>
+          <tr><th scope="row">Web Card</th><td data-label="Draf pertama">4 hari kerja</td><td data-label="Revisi">3 kali</td></tr>
+          <tr><th scope="row">Portfolio Pro</th><td data-label="Draf pertama">6 hari kerja</td><td data-label="Revisi">4 kali</td></tr>
+          <tr><th scope="row">Brand Kit</th><td data-label="Draf pertama">8 hari kerja</td><td data-label="Revisi">5 kali</td></tr>
+        </tbody>
+      </table>
     </div>
+  </section>
 
-    <section id="alur">
-      <h2 class="disp"><span class="num">01</span>Alurnya secara singkat</h2>
-      <ol class="list">
-        <li><strong>Bayar</strong> di halaman checkout Mayar.</li>
-        <li><strong>Isi Brand Brief.</strong> Tautannya muncul di halaman setelah pembayaran, dan kami juga mengirimkannya lewat WhatsApp.</li>
-        <li><strong>Tanya jawab</strong> singkat lewat WhatsApp untuk menggali pengalaman dan pencapaianmu.</li>
-        <li><strong>Draf pertama</strong> kami kirim sesuai waktu pengerjaan paketmu.</li>
-        <li><strong>Revisi</strong> sampai kamu puas, sesuai jatah paket.</li>
-        <li><strong>Serah terima.</strong> PDF dikirim, dan web CV dipasang di akun GitHub-mu untuk paket yang menyertakannya.</li>
-      </ol>
-      <p>Waktu pengerjaan dihitung dalam hari kerja (Senin sampai Jumat, di luar libur nasional), mulai dari pembayaran terkonfirmasi dan Brand Brief terisi lengkap.</p>
-      <div class="table">
-        <table>
-          <thead><tr><th scope="col">Paket</th><th scope="col">Draf pertama</th><th scope="col">Jatah revisi</th><th scope="col">Yang kamu terima</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Rapi ATS</th><td data-label="Draf pertama">2 hari kerja</td><td data-label="Jatah revisi">2 kali</td><td data-label="Yang kamu terima">PDF CV ATS</td></tr>
-            <tr><th scope="row">Signature</th><td data-label="Draf pertama">3 hari kerja</td><td data-label="Jatah revisi">3 kali</td><td data-label="Yang kamu terima">PDF CV ATS dan CV visual</td></tr>
-            <tr><th scope="row">Web Card</th><td data-label="Draf pertama">4 hari kerja</td><td data-label="Jatah revisi">3 kali</td><td data-label="Yang kamu terima">PDF dan web CV di GitHub Pages</td></tr>
-            <tr><th scope="row">Portfolio Pro</th><td data-label="Draf pertama">6 hari kerja</td><td data-label="Jatah revisi">4 kali</td><td data-label="Yang kamu terima">PDF 2 halaman, web multi-halaman, template surat lamaran, teks LinkedIn</td></tr>
-            <tr><th scope="row">Brand Kit</th><td data-label="Draf pertama">8 hari kerja</td><td data-label="Jatah revisi">5 kali</td><td data-label="Yang kamu terima">Semua isi Portfolio Pro, ditambah aset brand dan versi dua bahasa</td></tr>
-          </tbody>
-        </table>
+  <section class="more" aria-labelledby="more-t">
+    <h2 id="more-t" class="disp">Perlu tahu lebih?</h2>
+    <details>
+      <summary>Paketku punya web CV. Apa yang perlu disiapkan? <span aria-hidden="true">+</span></summary>
+      <div class="body">
+        <p>Akun GitHub, gratis. Daftar di <a href="https://github.com/signup">github.com/signup</a>, verifikasi email, lalu kirim username-mu lewat WhatsApp. Pemasangannya kami pandu.</p>
+        <p>Username menjadi alamat web CV (<span class="mono">username.github.io</span>), jadi pakai nama aslimu dengan huruf kecil, misalnya <span class="mono">nadiaputri</span>. Sudah punya situs di alamat itu? Web CV dipasang di <span class="mono">username.github.io/cv</span>.</p>
       </div>
-    </section>
-
-    <section id="brief">
-      <h2 class="disp"><span class="num">02</span>Mengisi Brand Brief</h2>
-      <p>Brand Brief adalah form singkat yang jadi bahan utama CV-mu. Isinya target karier, bahan CV, tiga pencapaian yang paling kamu banggakan, gaya bahasa, dan tampilan yang kamu suka.</p>
-      <ul>
-        <li><strong>Sudah punya CV?</strong> Cukup tempel tautannya. Kalau ada pengalaman baru yang belum tercantum, form akan menanyakannya.</li>
-        <li><strong>Belum punya CV?</strong> Pilih "Belum punya CV" di pertanyaan bahan CV. Kamu akan diminta mengisi pendidikan, pengalaman, dan keahlian dalam kolom-kolom pendek, jadi tidak perlu menulis panjang.</li>
-        <li><strong>Bagian cerita karier</strong> tidak perlu rapi. Tulis saja seperti bercerita ke teman: situasinya apa, apa yang kamu lakukan, dan hasilnya apa. Kalau ada angka (jumlah orang, persen, waktu yang dihemat), sertakan.</li>
-      </ul>
-      <p>Hari kerja baru mulai dihitung setelah Brand Brief terisi lengkap, jadi semakin cepat diisi, semakin cepat CV-mu selesai.</p>
-    </section>
-
-    <section id="tanya">
-      <h2 class="disp"><span class="num">03</span>Sesi tanya jawab</h2>
-      <p>Dalam 1 hari kerja setelah Brand Brief masuk, kami menghubungimu lewat WhatsApp dengan beberapa pertanyaan lanjutan. Tujuannya mengubah tugas sehari-hari menjadi pencapaian yang jelas di CV.</p>
-      <ul>
-        <li>Jawab dengan santai. Pesan suara juga boleh kalau lebih mudah.</li>
-        <li>Angka perkiraan tidak masalah, asal jujur. Kami akan menandai angka yang perlu kamu cek ulang sebelum CV final.</li>
-        <li>Paket Portfolio Pro dan Brand Kit mendapat call brief 20 menit. Jadwalnya kita sepakati lewat WhatsApp.</li>
-      </ul>
-      <p>Kami tidak akan menambahkan pengalaman, gelar, atau angka yang tidak pernah kamu sebutkan.</p>
-    </section>
-
-    <section id="revisi">
-      <h2 class="disp"><span class="num">04</span>Draf dan revisi</h2>
-      <p>Setelah draf pertama dikirim, kamu punya waktu 14 hari untuk memakai jatah revisi.</p>
-      <h3>Supaya jatah revisimu tidak cepat habis</h3>
-      <ul>
-        <li>Kumpulkan semua masukan, lalu kirim dalam satu pesan. Satu pesan berisi beberapa masukan dihitung satu kali revisi.</li>
-        <li>Sebutkan bagian yang dimaksud, misalnya "Pengalaman di PT Contoh, poin kedua", lalu tulis perubahan yang kamu mau.</li>
-        <li>Tangkapan layar yang diberi coretan juga boleh.</li>
-      </ul>
-      <h3>Yang termasuk revisi, dan yang tidak</h3>
-      <p>Revisi mencakup perubahan kata, urutan, penekanan, warna, dan tata letak. Salah ketik atau kekeliruan dari pihak kami kami perbaiki gratis tanpa mengurangi jatah. Mengganti target posisi sepenuhnya, atau menambah halaman di luar paket, dihitung sebagai pesanan baru atau naik paket. Detailnya ada di <a href="syarat.html#revisi">Syarat &amp; Ketentuan bagian 8</a>.</p>
-    </section>
-
-    <section id="hasil">
-      <h2 class="disp"><span class="num">05</span>Menerima hasil</h2>
-      <ul>
-        <li><strong>PDF</strong> (CV ATS dan CV visual) kami kirim lewat WhatsApp atau email, sesuai pilihanmu. Nomor HP dan email hanya dicantumkan di PDF.</li>
-        <li><strong>Web CV</strong> (Web Card, Portfolio Pro, Brand Kit) dipasang di akun GitHub milikmu. Langkah persiapannya ada di bagian berikutnya.</li>
-        <li><strong>File lain</strong> sesuai paket, misalnya teks LinkedIn atau surat lamaran, dikirim bersama PDF.</li>
-      </ul>
-      <p>Setelah serah terima, semua hasil itu milikmu. Simpan salinannya di tempat yang aman, karena file di penyimpanan kami akan dihapus paling lambat 90 hari setelah pesanan selesai.</p>
-    </section>
-
-    <section id="github">
-      <h2 class="disp"><span class="num">06</span>Menyiapkan akun GitHub</h2>
-      <p>Bagian ini hanya untuk paket yang punya web CV. Paket Rapi ATS dan Signature tidak memerlukan GitHub.</p>
-      <p>GitHub Pages kami pakai karena gratis, cepat, dan akunnya milikmu sendiri, jadi web CV tetap bisa diakses walaupun kamu tidak lagi memakai jasa kami.</p>
-      <h3>Kalau belum punya akun</h3>
-      <ol class="list">
-        <li>Buka <a href="https://github.com/signup">github.com/signup</a>, lalu daftar dengan email yang aktif.</li>
-        <li>Pilih username dengan hati-hati, karena username menjadi alamat web CV-mu: <span class="mono">username.github.io</span>.</li>
-        <li>Verifikasi email dari GitHub.</li>
-        <li>Kami sarankan mengaktifkan verifikasi dua langkah (two-factor authentication) di pengaturan akun.</li>
-        <li>Kirim username-mu ke kami lewat WhatsApp.</li>
-      </ol>
-      <h3>Tips memilih username</h3>
-      <ul>
-        <li>Pakai nama aslimu, huruf kecil, misalnya <span class="mono">nadiaputri</span> atau <span class="mono">nadia-lestari</span>.</li>
-        <li>Hindari angka acak, tahun lahir, atau nama panggilan yang terlalu santai.</li>
-        <li>Username bisa diganti nanti, tetapi alamat web CV ikut berubah dan tautan lama tidak berfungsi lagi.</li>
-      </ul>
-      <h3>Kalau sudah punya akun</h3>
-      <p>Kirim saja username-nya. Kalau alamat <span class="mono">username.github.io</span> sudah kamu pakai untuk situs lain, web CV dipasang di alamat seperti <span class="mono">username.github.io/cv</span> tanpa mengganggu situs yang sudah ada.</p>
-      <h3>Saat pemasangan</h3>
-      <p>Kami akan memandumu langkah demi langkah lewat WhatsApp, termasuk cara mengundang akun GitHub kami sebagai kolaborator. Akses itu bisa kamu cabut kapan saja setelah web CV selesai.</p>
-    </section>
-
-    <section id="kendala">
-      <h2 class="disp"><span class="num">07</span>Kalau ada kendala</h2>
-      <ul>
-        <li><strong>Belum menerima tautan Brand Brief?</strong> Hubungi kami lewat WhatsApp dengan menyebutkan nomor order.</li>
-        <li><strong>Butuh waktu lebih lama untuk menjawab?</strong> Tidak masalah. Tenggat kami bergeser sebanyak hari kamu menunggu. Kalau tidak ada kabar sama sekali selama 30 hari, pesanan dianggap selesai dengan versi terakhir yang sudah dikirim.</li>
-        <li><strong>Ingin membatalkan?</strong> Batal sebelum pengerjaan dimulai mendapat refund penuh. Aturan lengkapnya ada di <a href="syarat.html#refund">Syarat &amp; Ketentuan bagian 15</a>.</li>
-        <li><strong>Draf kami terlambat?</strong> Kalau draf pertama terlambat lebih dari dua kali waktu pengerjaan, kamu berhak meminta refund penuh.</li>
-      </ul>
-    </section>
-
-    <section id="data">
-      <h2 class="disp"><span class="num">08</span>Data pribadimu</h2>
-      <ul>
-        <li>Kami tidak meminta NIK, foto KTP, atau data keuangan.</li>
-        <li>Nomor HP, email, dan alamat tidak pernah ditampilkan di web CV publik.</li>
-        <li>Jawaban Brand Brief dan file kerja dihapus paling lambat 90 hari setelah pesanan selesai, kecuali kamu berlangganan CV Care.</li>
-      </ul>
-      <p>Penjelasan lengkapnya ada di <a href="privasi.html">Kebijakan Privasi</a>.</p>
-    </section>
-
-    <section id="kontak">
-      <h2 class="disp"><span class="num">09</span>Kontak</h2>
-      <p>Ada yang belum jelas? Kirim pesan dan sebutkan nomor ordermu.</p>
-      <div class="callout">
-        <strong>WhatsApp Glowfolio</strong>
-        <a href="https://wa.me/6285335831672">+62 853-3583-1672</a>
+    </details>
+    <details>
+      <summary>Apa yang dihitung sebagai revisi? <span aria-hidden="true">+</span></summary>
+      <div class="body">
+        <p>Satu pesan berisi beberapa masukan dihitung satu revisi. Salah ketik dari pihak kami diperbaiki gratis. Mengganti target posisi sepenuhnya dihitung sebagai pesanan baru. Detailnya di <a href="syarat.html#revisi">Syarat &amp; Ketentuan</a>.</p>
       </div>
-      <p>Kami membalas pada hari kerja, biasanya dalam 12 jam.</p>
-    </section>
-  </main>
-</div>
+    </details>
+    <details>
+      <summary>Kalau aku telat menjawab, atau ingin batal? <span aria-hidden="true">+</span></summary>
+      <div class="body">
+        <p>Tenggat kami bergeser sebanyak hari kamu menunggu. Batal sebelum pengerjaan dimulai mendapat refund penuh, begitu juga kalau draf pertama kami terlambat lebih dari dua kali waktu pengerjaan. Aturan lengkapnya di <a href="syarat.html#refund">Syarat &amp; Ketentuan</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Bagaimana dengan data pribadiku? <span aria-hidden="true">+</span></summary>
+      <div class="body">
+        <p>Nomor HP dan alamat tidak pernah tampil di web CV. Jawaban Brand Brief dan file kerja dihapus paling lambat 90 hari setelah pesanan selesai. Selengkapnya di <a href="privasi.html">Kebijakan Privasi</a>.</p>
+      </div>
+    </details>
+  </section>
+
+  <div class="contact">
+    <p>Ada yang belum jelas? Sebutkan nomor ordermu.<small>Kami membalas pada hari kerja, biasanya dalam 12 jam.</small></p>
+    <a class="btn btn-accent" href="https://wa.me/6285335831672">WhatsApp +62 853-3583-1672</a>
+  </div>
+</main>
 
 <footer class="foot">
   <div class="foot-in">
